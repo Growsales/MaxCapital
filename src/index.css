@@ -1,0 +1,487 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* MaxCapital Design System - Design Tokens CSS Variables */
+@import './lib/design-system/tokens.css';
+
+/* Max Capital Design System - Professional Fintech Dark Theme */
+
+@layer base {
+  :root {
+    /* Light Mode - Deep Professional (balanced) */
+    --background: 0 2% 85%;
+    --foreground: 0 3% 10%;
+
+    /* Card Surfaces */
+    --card: 0 1% 89%;
+    --card-foreground: 0 3% 10%;
+
+    /* Popover/Dropdown */
+    --popover: 0 1% 89%;
+    --popover-foreground: 0 3% 10%;
+
+    /* Primary - Vibrant Green */
+    --primary: 164 100% 36%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary */
+    --secondary: 0 1% 76%;
+    --secondary-foreground: 0 3% 10%;
+
+    /* Muted */
+    --muted: 0 1% 78%;
+    --muted-foreground: 0 2% 36%;
+
+    /* Accent */
+    --accent: 164 100% 36%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders and Inputs */
+    --border: 0 1% 70%;
+    --input: 0 1% 76%;
+    --ring: 164 100% 36%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar - Black even in light mode */
+    --sidebar-background: 0 0% 0%;
+    --sidebar-foreground: 210 2% 70%;
+    --sidebar-primary: 164 100% 42%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 3% 14%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 3% 14%;
+    --sidebar-ring: 164 100% 42%;
+
+    /* Custom Max Capital Colors */
+    --success: 164 100% 42%;
+    --warning: 45 93% 47%;
+    --info: 210 100% 50%;
+    --error: 0 72% 51%;
+
+    /* Lead Tag Colors */
+    --lead-cold: 210 100% 50%;
+    --lead-warm: 45 93% 47%;
+    --lead-hot: 25 95% 53%;
+    --lead-converted: 164 100% 42%;
+
+    /* Pipeline Stage Colors */
+    --stage-prospect: 210 5% 65%;
+    --stage-committee: 210 60% 50%;
+    --stage-commercial: 270 50% 55%;
+    --stage-active: 164 100% 42%;
+    --stage-matchmaking: 25 95% 50%;
+    --stage-preparation: 45 93% 50%;
+    --stage-negotiation: 0 72% 55%;
+    --stage-completed: 164 72% 35%;
+
+    /* Profile Card Colors */
+    --profile-partner: 210 60% 50%;
+    --profile-company: 164 100% 42%;
+    --profile-investor: 30 60% 50%;
+  }
+
+  .dark {
+    /* Dark Mode - Professional Fintech (#231F20 base, #000000 accents) */
+    --background: 0 7% 7%;
+    --foreground: 0 0% 98%;
+
+    /* Card Surfaces - Slightly lighter dark */
+    --card: 0 5% 10%;
+    --card-foreground: 0 0% 98%;
+
+    /* Popover/Dropdown */
+    --popover: 0 5% 10%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Primary - Vibrant Green (#00D6A3) */
+    --primary: 164 100% 42%;
+    --primary-foreground: 0 0% 0%;
+
+    /* Secondary - Silver Gray (#BCBEC0) */
+    --secondary: 210 2% 74%;
+    --secondary-foreground: 0 2% 13%;
+
+    /* Muted - Subtle Gray */
+    --muted: 0 3% 16%;
+    --muted-foreground: 210 2% 60%;
+
+    /* Accent - Primary Green */
+    --accent: 164 100% 42%;
+    --accent-foreground: 0 0% 0%;
+
+    /* Destructive - Warning Red */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders and Inputs */
+    --border: 0 3% 20%;
+    --input: 0 3% 14%;
+    --ring: 164 100% 42%;
+
+    /* Sidebar - Dark */
+    --sidebar-background: 0 0% 0%;
+    --sidebar-foreground: 210 2% 70%;
+    --sidebar-primary: 164 100% 42%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 3% 14%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 3% 14%;
+    --sidebar-ring: 164 100% 42%;
+
+    /* Custom Max Capital Colors */
+    --success: 164 100% 42%;
+    --warning: 45 93% 47%;
+    --info: 210 100% 50%;
+    --error: 0 72% 51%;
+
+    /* Lead Tag Colors */
+    --lead-cold: 210 100% 50%;
+    --lead-warm: 45 93% 47%;
+    --lead-hot: 25 95% 53%;
+    --lead-converted: 164 100% 42%;
+
+    /* Pipeline Stage Colors */
+    --stage-prospect: 0 3% 25%;
+    --stage-committee: 210 60% 35%;
+    --stage-commercial: 270 50% 40%;
+    --stage-active: 164 72% 35%;
+    --stage-matchmaking: 25 95% 40%;
+    --stage-preparation: 45 93% 40%;
+    --stage-negotiation: 0 72% 45%;
+    --stage-completed: 164 72% 30%;
+
+    /* Profile Card Colors */
+    --profile-partner: 210 60% 35%;
+    --profile-company: 164 72% 35%;
+    --profile-investor: 30 60% 35%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/30;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}
+
+@layer components {
+  /* Max Capital Logo Text */
+  .logo-text {
+    @apply text-xl font-bold tracking-tight;
+  }
+
+  .logo-text span:first-child {
+    @apply text-foreground;
+  }
+
+  .logo-text span:last-child {
+    @apply text-primary;
+  }
+
+  /* Auth Layout */
+  .auth-layout {
+    @apply min-h-screen grid lg:grid-cols-2;
+  }
+
+  .auth-hero {
+    @apply relative hidden lg:flex items-end p-8 bg-cover bg-center;
+  }
+
+  .auth-hero::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent;
+  }
+
+  .auth-form-container {
+    @apply flex items-center justify-center p-8 bg-background;
+  }
+
+  /* Profile Selection Cards */
+  .profile-card {
+    @apply relative p-6 rounded-lg border border-border/50 cursor-pointer transition-all duration-300;
+    @apply hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10;
+    @apply hover:-translate-y-1;
+  }
+
+  .profile-card.partner {
+    @apply bg-gradient-to-br from-[hsl(var(--profile-partner))] to-[hsl(var(--profile-partner))]/80;
+  }
+
+  .profile-card.company {
+    @apply bg-gradient-to-br from-[hsl(var(--profile-company))] to-[hsl(var(--profile-company))]/80;
+  }
+
+  .profile-card.investor {
+    @apply bg-gradient-to-br from-[hsl(var(--profile-investor))] to-[hsl(var(--profile-investor))]/80;
+  }
+
+  /* Dashboard Cards */
+  .dashboard-card {
+    @apply p-6 rounded-xl bg-card border border-border/50;
+    @apply transition-all duration-200 hover:border-border;
+  }
+
+  .stat-card {
+    @apply p-4 rounded-lg bg-card border border-border/50;
+    @apply flex flex-col gap-2;
+  }
+
+  .stat-value {
+    @apply text-2xl font-bold text-foreground;
+  }
+
+  .stat-label {
+    @apply text-sm text-muted-foreground;
+  }
+
+  .stat-change {
+    @apply text-xs flex items-center gap-1;
+  }
+
+  .stat-change.positive {
+    @apply text-[hsl(var(--success))];
+  }
+
+  .stat-change.negative {
+    @apply text-destructive;
+  }
+
+  /* Welcome Banner */
+  .welcome-banner {
+    @apply relative overflow-hidden rounded-xl p-6 bg-gradient-to-r from-card via-card to-transparent;
+    @apply border border-border/50;
+  }
+
+  /* Pipeline Stage Tabs */
+  .pipeline-tabs {
+    @apply flex gap-0 border-b border-border overflow-x-auto;
+  }
+
+  .pipeline-tab {
+    @apply px-4 py-3 text-sm font-medium text-muted-foreground whitespace-nowrap;
+    @apply border-b-2 border-transparent transition-colors;
+    @apply hover:text-foreground cursor-pointer;
+  }
+
+  .pipeline-tab.active {
+    @apply text-foreground border-primary;
+  }
+
+  /* Lead Tag Badges */
+  .lead-badge {
+    @apply px-2 py-0.5 text-xs font-medium rounded-full;
+  }
+
+  .lead-badge.cold {
+    @apply bg-[hsl(var(--lead-cold))]/20 text-[hsl(var(--lead-cold))];
+  }
+
+  .lead-badge.warm {
+    @apply bg-[hsl(var(--lead-warm))]/20 text-[hsl(var(--lead-warm))];
+  }
+
+  .lead-badge.hot {
+    @apply bg-[hsl(var(--lead-hot))]/20 text-[hsl(var(--lead-hot))];
+  }
+
+  .lead-badge.converted {
+    @apply bg-[hsl(var(--lead-converted))]/20 text-[hsl(var(--lead-converted))];
+  }
+
+  /* Status Badges */
+  .status-badge {
+    @apply px-2 py-0.5 text-xs font-medium rounded-full;
+  }
+
+  .status-badge.complete {
+    @apply bg-[hsl(var(--success))]/20 text-[hsl(var(--success))];
+  }
+
+  .status-badge.incomplete {
+    @apply bg-[hsl(var(--warning))]/20 text-[hsl(var(--warning))];
+  }
+
+  .status-badge.active {
+    @apply bg-[hsl(var(--success))]/20 text-[hsl(var(--success))];
+  }
+
+  .status-badge.inactive {
+    @apply bg-destructive/20 text-destructive;
+  }
+
+  /* Table Styling */
+  .data-table {
+    @apply w-full text-sm;
+  }
+
+  .data-table thead {
+    @apply border-b border-border;
+  }
+
+  .data-table th {
+    @apply px-4 py-3 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider;
+  }
+
+  .data-table tbody tr {
+    @apply border-b border-border/50 transition-colors;
+    @apply hover:bg-muted/30;
+  }
+
+  .data-table td {
+    @apply px-4 py-4 text-left;
+  }
+
+  /* Sidebar Navigation */
+  .nav-section-title {
+    @apply px-3 py-2 text-xs font-semibold text-sidebar-foreground uppercase tracking-wider;
+  }
+
+  .nav-item {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium;
+    @apply text-sidebar-foreground transition-colors;
+    @apply hover:bg-sidebar-accent hover:text-white;
+  }
+
+  .nav-item.active {
+    @apply bg-sidebar-accent text-white;
+  }
+
+  /* Form Inputs */
+  .form-input {
+    @apply w-full px-4 py-3 rounded-lg bg-input border border-border;
+    @apply text-foreground placeholder:text-muted-foreground;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary;
+    @apply transition-all duration-200;
+  }
+
+  /* Action Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg;
+    @apply bg-primary text-primary-foreground font-medium;
+    @apply hover:bg-primary/90 transition-colors;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/50;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg;
+    @apply bg-accent text-accent-foreground font-medium;
+    @apply hover:bg-accent/90 transition-colors;
+    @apply focus:outline-none focus:ring-2 focus:ring-accent/50;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg;
+    @apply border border-border text-foreground font-medium;
+    @apply hover:bg-muted transition-colors;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/50;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg;
+    @apply text-muted-foreground font-medium;
+    @apply hover:bg-muted hover:text-foreground transition-colors;
+  }
+}
+
+@layer utilities {
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(0,214,163,0.1), 0 0 40px rgba(0,214,163,0.05);
+    }
+    50% {
+      box-shadow: 0 0 35px rgba(0,214,163,0.25), 0 0 70px rgba(0,214,163,0.1);
+    }
+  }
+
+  .animate-\[pulse-glow_3s_ease-in-out_infinite\] {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+  /* Animation Utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.2s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { 
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    @apply transition-transform duration-200 hover:-translate-y-0.5;
+  }
+
+  .hover-glow {
+    @apply transition-shadow duration-200 hover:shadow-lg hover:shadow-primary/20;
+  }
+
+  /* Text Gradients */
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent;
+  }
+}

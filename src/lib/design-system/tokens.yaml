@@ -1,0 +1,252 @@
+## MaxCapital Design Tokens (W3C DTCG Format)
+## Generated: February 5, 2026 | YOLO Mode Autonomous
+## Source: Brownfield audit of existing components
+
+metadata:
+  version: "1.0.0"
+  name: "MaxCapital Design System"
+  description: "Centralized design tokens for UI consistency"
+  lastModified: "2026-02-05"
+
+# ============================================================
+# COLOR TOKENS
+# ============================================================
+
+colors:
+  # Semantic Colors (Intent-based)
+  semantic:
+    success:
+      base: { value: "#10b981", type: "color" }
+      light: { value: "#d1fae5", type: "color" }
+      dark: { value: "#047857", type: "color" }
+      text: { value: "#065f46", type: "color" }
+      bg: { value: "#ecfdf5", type: "color" }
+
+    error:
+      base: { value: "#ef4444", type: "color" }
+      light: { value: "#fee2e2", type: "color" }
+      dark: { value: "#dc2626", type: "color" }
+      text: { value: "#991b1b", type: "color" }
+      bg: { value: "#fef2f2", type: "color" }
+
+    warning:
+      base: { value: "#f59e0b", type: "color" }
+      light: { value: "#fef3c7", type: "color" }
+      dark: { value: "#d97706", type: "color" }
+      text: { value: "#92400e", type: "color" }
+      bg: { value: "#fffbeb", type: "color" }
+
+    info:
+      base: { value: "#3b82f6", type: "color" }
+      light: { value: "#dbeafe", type: "color" }
+      dark: { value: "#1d4ed8", type: "color" }
+      text: { value: "#1e3a8a", type: "color" }
+      bg: { value: "#eff6ff", type: "color" }
+
+  # Neutral/Grayscale
+  neutral:
+    50: { value: "#f9fafb", type: "color" }
+    100: { value: "#f3f4f6", type: "color" }
+    200: { value: "#e5e7eb", type: "color" }
+    300: { value: "#d1d5db", type: "color" }
+    400: { value: "#9ca3af", type: "color" }
+    500: { value: "#6b7280", type: "color" }
+    600: { value: "#4b5563", type: "color" }
+    700: { value: "#374151", type: "color" }
+    800: { value: "#1f2937", type: "color" }
+    900: { value: "#111827", type: "color" }
+
+  # Brand Colors
+  brand:
+    primary:
+      base: { value: "#3b82f6", type: "color" }
+      light: { value: "#dbeafe", type: "color" }
+      dark: { value: "#1e40af", type: "color" }
+
+    secondary:
+      base: { value: "#8b5cf6", type: "color" }
+      light: { value: "#ede9fe", type: "color" }
+      dark: { value: "#6d28d9", type: "color" }
+
+# ============================================================
+# TYPOGRAPHY TOKENS
+# ============================================================
+
+typography:
+  fontFamily:
+    system: { value: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif", type: "fontFamily" }
+    mono: { value: "'Monaco', 'Courier New', monospace", type: "fontFamily" }
+
+  fontSize:
+    xs: { value: "0.75rem", type: "fontSize" }      # 12px
+    sm: { value: "0.875rem", type: "fontSize" }     # 14px
+    base: { value: "1rem", type: "fontSize" }       # 16px
+    lg: { value: "1.125rem", type: "fontSize" }     # 18px
+    xl: { value: "1.25rem", type: "fontSize" }      # 20px
+    2xl: { value: "1.5rem", type: "fontSize" }      # 24px
+    3xl: { value: "1.875rem", type: "fontSize" }    # 30px
+
+  fontWeight:
+    regular: { value: "400", type: "fontWeight" }
+    medium: { value: "500", type: "fontWeight" }
+    semibold: { value: "600", type: "fontWeight" }
+    bold: { value: "700", type: "fontWeight" }
+
+  lineHeight:
+    tight: { value: "1.25", type: "lineHeight" }
+    normal: { value: "1.5", type: "lineHeight" }
+    relaxed: { value: "1.75", type: "lineHeight" }
+
+  letterSpacing:
+    tight: { value: "-0.02em", type: "letterSpacing" }
+    normal: { value: "0", type: "letterSpacing" }
+    wide: { value: "0.02em", type: "letterSpacing" }
+
+# ============================================================
+# SPACING TOKENS
+# ============================================================
+
+spacing:
+  xs: { value: "0.25rem", type: "spacing" }      # 4px
+  sm: { value: "0.5rem", type: "spacing" }       # 8px
+  md: { value: "1rem", type: "spacing" }         # 16px
+  lg: { value: "1.5rem", type: "spacing" }       # 24px
+  xl: { value: "2rem", type: "spacing" }         # 32px
+  2xl: { value: "3rem", type: "spacing" }        # 48px
+  3xl: { value: "4rem", type: "spacing" }        # 64px
+
+# ============================================================
+# SIZE TOKENS (for components)
+# ============================================================
+
+sizing:
+  # Button sizes
+  button:
+    sm:
+      height: { value: "2.25rem", type: "sizing" }      # 36px
+      paddingX: { value: "0.75rem", type: "sizing" }    # 12px
+
+    md:
+      height: { value: "2.5rem", type: "sizing" }       # 40px
+      paddingX: { value: "1rem", type: "sizing" }       # 16px
+
+    lg:
+      height: { value: "2.75rem", type: "sizing" }      # 44px
+      paddingX: { value: "1.5rem", type: "sizing" }     # 24px
+
+  # Icon sizes
+  icon:
+    sm: { value: "1rem", type: "sizing" }               # 16px
+    md: { value: "1.5rem", type: "sizing" }             # 24px
+    lg: { value: "2rem", type: "sizing" }               # 32px
+
+# ============================================================
+# BORDER RADIUS TOKENS
+# ============================================================
+
+borderRadius:
+  none: { value: "0", type: "borderRadius" }
+  sm: { value: "0.25rem", type: "borderRadius" }       # 4px
+  md: { value: "0.375rem", type: "borderRadius" }      # 6px
+  lg: { value: "0.5rem", type: "borderRadius" }        # 8px
+  xl: { value: "0.75rem", type: "borderRadius" }       # 12px
+  full: { value: "9999px", type: "borderRadius" }
+
+# ============================================================
+# SHADOW TOKENS
+# ============================================================
+
+shadows:
+  xs: { value: "0 1px 2px 0 rgba(0, 0, 0, 0.05)", type: "shadow" }
+  sm: { value: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)", type: "shadow" }
+  md: { value: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)", type: "shadow" }
+  lg: { value: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)", type: "shadow" }
+  xl: { value: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)", type: "shadow" }
+
+# ============================================================
+# TRANSITION/ANIMATION TOKENS
+# ============================================================
+
+transitions:
+  fast: { value: "150ms ease-in-out", type: "transition" }
+  base: { value: "200ms ease-in-out", type: "transition" }
+  slow: { value: "300ms ease-in-out", type: "transition" }
+
+# ============================================================
+# COMPONENT-SPECIFIC TOKENS
+# ============================================================
+
+components:
+  button:
+    default:
+      bg: { value: "{colors.brand.primary.base}", type: "color" }
+      text: { value: "{colors.neutral.50}", type: "color" }
+      border: { value: "1px solid {colors.brand.primary.base}", type: "border" }
+
+    destructive:
+      bg: { value: "{colors.semantic.error.base}", type: "color" }
+      text: { value: "{colors.neutral.50}", type: "color" }
+      border: { value: "1px solid {colors.semantic.error.base}", type: "border" }
+
+    outline:
+      bg: { value: "{colors.neutral.50}", type: "color" }
+      text: { value: "{colors.neutral.900}", type: "color" }
+      border: { value: "1px solid {colors.neutral.300}", type: "border" }
+
+    ghost:
+      bg: { value: "transparent", type: "color" }
+      text: { value: "{colors.neutral.900}", type: "color" }
+      border: { value: "none", type: "border" }
+
+  input:
+    bg: { value: "{colors.neutral.50}", type: "color" }
+    text: { value: "{colors.neutral.900}", type: "color" }
+    border: { value: "1px solid {colors.neutral.300}", type: "border" }
+    borderFocus: { value: "2px solid {colors.brand.primary.base}", type: "border" }
+
+  card:
+    bg: { value: "{colors.neutral.50}", type: "color" }
+    border: { value: "1px solid {colors.neutral.200}", type: "border" }
+    shadow: { value: "{shadows.sm}", type: "shadow" }
+
+  modal:
+    overlay: { value: "rgba(0, 0, 0, 0.5)", type: "color" }
+    bg: { value: "{colors.neutral.50}", type: "color" }
+    border: { value: "1px solid {colors.neutral.200}", type: "border" }
+
+  alert:
+    error:
+      bg: { value: "{colors.semantic.error.bg}", type: "color" }
+      border: { value: "1px solid {colors.semantic.error.light}", type: "border" }
+      text: { value: "{colors.semantic.error.text}", type: "color" }
+
+    success:
+      bg: { value: "{colors.semantic.success.bg}", type: "color" }
+      border: { value: "1px solid {colors.semantic.success.light}", type: "border" }
+      text: { value: "{colors.semantic.success.text}", type: "color" }
+
+    warning:
+      bg: { value: "{colors.semantic.warning.bg}", type: "color" }
+      border: { value: "1px solid {colors.semantic.warning.light}", type: "border" }
+      text: { value: "{colors.semantic.warning.text}", type: "color" }
+
+---
+
+## Token Categories Summary
+
+✓ **Colors:** Semantic (success/error/warning/info) + Neutral + Brand
+✓ **Typography:** Font families, sizes, weights, line heights
+✓ **Spacing:** Consistent 4px baseline scale (4, 8, 16, 24, 32, 48, 64px)
+✓ **Sizing:** Button + Icon sizes
+✓ **Borders:** Radius scale for consistency
+✓ **Shadows:** Elevation system (xs to xl)
+✓ **Transitions:** Fast/base/slow animation timings
+✓ **Components:** Button, Input, Card, Modal, Alert variants
+
+## Integration
+
+### Next Steps:
+1. **Tailwind Config:** Map these tokens to tailwind.config.ts
+2. **CSS Variables:** Export as :root CSS variables
+3. **Figma Sync:** Use Design Tokens for Figma integration
+4. **Component Library:** Reference tokens in all components
