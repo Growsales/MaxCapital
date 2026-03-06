@@ -1,0 +1,29 @@
+language: pt-BR
+
+reviews:
+  profile: chill
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: false
+  review_status: true
+  collapse_walkthrough: false
+  auto_review:
+    enabled: true
+    drafts: false
+    base_branches:
+      - master
+
+  path_instructions:
+    - path: "src/features/**"
+      instructions: "Feature module. Verificar se segue o padrão: api/, components/, pages/, index.ts"
+    - path: "src/lib/permissions/**"
+      instructions: "RBAC engine. Verificar que permissoes usam formato recurso:acao. Nao aceitar bypass de permissao."
+    - path: "src/components/modals/**"
+      instructions: "Usar sempre GenericModal como base. Nao criar modais custom fora do padrao."
+    - path: "src/**/*.test.*"
+      instructions: "Testes com Vitest + Testing Library. Verificar cobertura de edge cases."
+    - path: "src/lib/supabase.ts"
+      instructions: "Mock client — nao ha backend real. Nao sugerir conexoes reais com Supabase."
+
+chat:
+  auto_reply: true
