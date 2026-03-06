@@ -19,6 +19,15 @@
     },
     {
       "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./packages/shared"
+    },
+    {
+      "path": "./packages/api"
+    },
+    {
+      "path": "./packages/web"
     }
   ]
 }

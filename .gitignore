@@ -54,3 +54,9 @@ Thumbs.db
 # AIOX Local (AIOX)
 .aiox-core/local/
 .aiox/install-log.txt
+
+# Turbo
+.turbo/
+
+# TypeScript build info
+*.tsbuildinfo
